@@ -1,8 +1,8 @@
 // Hose connector modules
 // version 2023-02-23
 
-use <dotSCAD/src/ring_extrude.scad>
-use <dotSCAD/src/shape_circle.scad>
+use <dot/ring_extrude.scad>
+use <dot/shape_circle.scad>
 // https://justinsdk.github.io/dotSCAD/
 
 /* [Hidden] */
@@ -844,11 +844,11 @@ module HoseConnector(
             cylinder(fudgeFactor, d=innerEndDiameter);
         }
       }
-   
+
       // Create the end cap
     if(endCapThickness > 0)
     {
-      difference () 
+      difference ()
       {
         cylinder(endCapThickness, d=innerEndDiameter + wallThickness/2);
         translate([0,0,-fudgeFactor])
@@ -884,7 +884,7 @@ module Stopper(
     zPosition = 0
 )
 {
-  
+
   intersection()
   {
     flat = totalLength * (1 - taper1 - taper2);
@@ -895,7 +895,7 @@ module Stopper(
       zPosition = zPosition);
 
       _diameter = outer ? diameter : diameter + wallThickness*2;
-  
+
       //Bottom taper
       if(taper1 > 0)
       {
@@ -930,7 +930,7 @@ module Stopper(
           wallThickness1 = width2,
           wallThickness2 = 0,
           zPosition = zPosition);
-        
+
       }
    }
 }

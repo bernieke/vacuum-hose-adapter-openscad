@@ -1,3 +1,8 @@
+# Requirements
+
+Requires openscad-dotscad-git to be installed.
+
+
 # Vacuum hose adapters for OpenSCAD
 
 This is a collection of OpenSCAD modules that allow you to easily design and 3D
